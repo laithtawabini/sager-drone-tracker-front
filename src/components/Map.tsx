@@ -9,7 +9,6 @@ import { getDurationString } from '@/utils';
 import { Button } from './ui/button';
 import { setSelectedDrone } from '@/features/drone/droneSlice';
 
-
 function Map() {
   const mapRef = useRef<mapboxgl.Map | null>(null)
   const mapContainerRef = useRef<HTMLDivElement | null>(null)
@@ -95,7 +94,7 @@ function Map() {
         mapRef.current.off('drag', handleDrag);
       }
     };
-  }, [dispatch, options.cancelSelectionOnMapDrag]);
+  }, [dispatch, mapLoaded, options.cancelSelectionOnMapDrag]);
 
   // This effect handles updates to the latest moving drone, drawing its path and updating its marker
   useEffect(() => {
@@ -204,7 +203,7 @@ function Map() {
           </div>
 
           <div class="rounded-full ${props.registration.startsWith("SD-B") ? "bg-green-500" : "bg-red-500"} h-7 w-7 flex items-center justify-center">
-            <img src="./src/assets/drone_icon.svg" alt="drone icon" class="h-5 w-5 object-contain invert" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 object-contain invert lucide lucide-drone-icon lucide-drone"><path d="M10 10 7 7"/><path d="m10 14-3 3"/><path d="m14 10 3-3"/><path d="m14 14 3 3"/><path d="M14.205 4.139a4 4 0 1 1 5.439 5.863"/><path d="M19.637 14a4 4 0 1 1-5.432 5.868"/><path d="M4.367 10a4 4 0 1 1 5.438-5.862"/><path d="M9.795 19.862a4 4 0 1 1-5.429-5.873"/><rect x="10" y="8" width="4" height="8" rx="1"/></svg>
           </div>
 
         </div>
