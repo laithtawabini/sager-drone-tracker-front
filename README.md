@@ -12,4 +12,6 @@ I have used React with TS and Vite as a base
 
 For UI and styling i have used Tailwind css mainly and some Shadcn components
 
+The map component may be overwhelming and can definatly be better written or refactored, but i have added comments above every useEffect to hopefully make it more clear and readable
+
 Thats it, enjoy!
