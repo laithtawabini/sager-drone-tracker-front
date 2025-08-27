@@ -12,6 +12,8 @@ I have used React with TS and Vite as a base
 
 For UI and styling i have used Tailwind css mainly and some Shadcn components
 
+For State Management i have used Redux Toolkit, react context was definatly possible but just to showcase my stack i have used redux
+
 The map component may be overwhelming and can definatly be better written or refactored, but i have added comments above every useEffect to hopefully make it more clear and readable
 
 I have used github copilot extension in vscode as an assistant while building this project, but with care, each AI generated line was reviewed before i added it
