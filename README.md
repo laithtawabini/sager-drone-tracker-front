@@ -1,4 +1,4 @@
-# Sager Drone Tracking - Technical Task
+# Sager Drone Tracking
 
 App is deployed at: https://laithtawabini.github.io/sager-drone-tracker-front/
 
